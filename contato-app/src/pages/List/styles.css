@@ -1,0 +1,50 @@
+#content-container{
+    padding: 5rem;
+    background-color: #5B0E2D;
+}
+
+.btn-edit{
+    border: 0;
+    border-radius: 0.5rem;
+    background: none;
+    color: #000;
+    text-decoration: none;
+}
+
+#btn-add{
+    text-decoration: none;
+    background:  #5B0E2D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color: #ffffff;
+    font: 700 1.6rem Archivo;
+    cursor: pointer;
+    height: 3.4rem;
+    border-radius: 0.8rem;
+    width: 130px;
+}
+#button-add{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+
+Link{
+    text-decoration: none;
+}
+.btn-del{
+    border: 0;
+    border-radius: 0.5rem;
+    background: none;
+}
+
+.tabela{
+    background: #FFF;
+    padding: 6rem;
+    border-radius: 0.8rem;
+    width: 80vw;
+    box-shadow: 60px -16px #5B0E2D;
+}
