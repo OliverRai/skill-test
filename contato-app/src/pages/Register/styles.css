@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F5DEB3;
+    border-radius: 0.8rem;
+    box-shadow: 60px -16px #5B0E2D;
+    padding: 25px;
+}
+
+.input-block{
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.input-block input{
+    height: 3.8rem;
+    border-radius: 0.5rem;
+    width: 500px;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    border: none;
+    font-size: 14px;
+}
+
+.btn-voltar{
+    color: #ffffff;
+    font: 700 1.6rem Archivo;
+    cursor: pointer;
+    height: 3.6rem;
+    border-radius: 0.8rem;
+    width: 45%;
+    background-color: darkorange;
+    border: none;
+    margin-right: 1rem;
+}
+
+.btn-cad{
+    background-color: forestgreen;
+    color: #ffffff;
+    font: 700 1.6rem Archivo;
+    cursor: pointer;
+    height: 3.6rem;
+    border-radius: 0.8rem;
+    width: 45%;
+    border: none
+}
+
+.button-block{
+    margin-top: 1.4rem;
+    width: 100%;
+}
