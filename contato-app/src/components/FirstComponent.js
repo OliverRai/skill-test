@@ -1,4 +1,5 @@
-import React, { Component, Link } from 'react'
+import React, { Component} from 'react'
+import {Link }from 'react-router-dom'
 import ReactPaginate from 'react-paginate';
 import * as Icon from 'react-feather'
 import UserService from '../service/UserService';
@@ -59,7 +60,7 @@ export class PaginationExample extends Component{
                 tdata: response.data,
                 pageCount: Math.ceil(tdata.length / this.state.perPage),
                 orgtableData: tdata,
-                tableData: slice
+                table: slice
             })
         });
     }
@@ -105,7 +106,7 @@ export class PaginationExample extends Component{
                                         <td>{tdata.estado}</td>
                                         <td>{tdata.estadoCivil}</td>
                                         <td><button className="btn-del" onClick={() =>this.deletePessoa(tdata.id)}><Icon.Trash></Icon.Trash></button></td>
-                                        <td><button className="btn-edit"><Icon.Edit></Icon.Edit></button></td>
+                                        <td><Link to="edit"><button className="btn-edit"><Icon.Edit></Icon.Edit></button></Link> </td>
                                         
                                     </tr>
 
