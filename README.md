@@ -17,3 +17,10 @@
   <li><strong>Paginação ainda não iniciada</strong></li>
  </ul>
  
+ <h3>Algumas imagens para que possa ter uma ideia do que estou fazendo</h3>
+  <img src="https://user-images.githubusercontent.com/45560284/94348232-e6683d80-0010-11eb-895b-08a28074cfc8.jpg" width=400px height=200px> 
+  <img src="https://user-images.githubusercontent.com/45560284/94348239-e9fbc480-0010-11eb-81df-5d8633091ee5.jpg" width=400px height=200px>
+  <img src="https://user-images.githubusercontent.com/45560284/94348238-e8ca9780-0010-11eb-8637-d9286baf241c.jpg" width=400px height=200px>
+
+
+ 
