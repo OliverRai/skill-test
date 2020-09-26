@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import Routes from './Routes';
 
+import './assets/global.css'
+
+
 function App() {
   return (
     <div className="App">
@@ -11,3 +14,5 @@ function App() {
 }
 
 export default App;
+
+

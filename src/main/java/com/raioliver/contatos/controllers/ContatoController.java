@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api")
-@CrossOrigin("*")
 public class ContatoController {
 
     @Autowired
@@ -22,17 +21,23 @@ public class ContatoController {
         return repository.save(contato);
     }
 
-    @GetMapping("pessoas")
-    public List<Contato> getPeople(){
-        return this.repository.findAll();
+    @GetMapping
+    public List<Contato> getAll(){
+        return repository.findAll();
     }
 
-    @DeleteMapping("{id}")
+    @GetMapping("{id}")
+    public Contato getInfo(@PathVariable Integer id){
+        return repository.findById(id).orElseThrow(() ->
+                new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente não encontrado"));
+    }
+
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id){
         repository.deleteById(id);
     }
 
-    @PutMapping("pessoas/{id}")
+    @PutMapping("/{id}")
     public void atualizar(@PathVariable Integer id, @RequestBody Contato contatoAtualizada) {
         repository
                 .findById(id)

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import UserService from '../../service/userService';
+import UserService from '../../service/UserService'
 import * as Icon from 'react-feather'
 
 import './styles.css';
+
 class ListPessoas extends React.Component{
 
     constructor(props){
@@ -14,6 +15,10 @@ class ListPessoas extends React.Component{
     }
 
     componentDidMount(){
+        this.data();
+    }
+
+    data(){
         UserService.getUsers().then((reponse) => {
             this.setState({ users: reponse.data})
         });
@@ -62,7 +67,7 @@ class ListPessoas extends React.Component{
                                     <td>{user.cidade}</td>
                                     <td>{user.estado}</td>
                                     <td>{user.estadoCivil}</td>
-                                    <td><Link to={"/edit/"+user.id}><button className="btn-edit"><Icon.Edit></Icon.Edit></button></Link></td>
+                                    <td><Link to={"edit/"+user.id}><button className="btn-edit"><Icon.Edit></Icon.Edit></button></Link></td>
                                     <td><button className="btn-del" onClick={() =>this.deletePessoa(user.id)}><Icon.Trash></Icon.Trash></button></td>
                                 </tr>
                             )

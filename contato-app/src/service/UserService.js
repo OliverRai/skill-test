@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api_url_pessoas = 'http://localhost:8080/api/pessoas';
+const api_url_pessoas = 'http://localhost:8080/api/';
 
 class UserService{
 
@@ -10,4 +10,4 @@ class UserService{
 
 }
 
-export default new UserService;
+export default new UserService();
