@@ -13,7 +13,7 @@
  <ul>
   <li>Métodos de inserir usuários, atualizar e deletar prontos! Nenhum mistério! Apenas fiz os métodos em questão na API, usando as anotações PostMapping e DeleteMapping. Ah, não se esqueça de configurar o CORS, ou ele irá bloquear sua requisição! (muita dor de cabeça rs)</li>
   <li>Instalei com o yarn o react-feather, para poder usar uns icons maneiros e deixar mais aprensentável</li>
- <li><strong>Paginação ainda não concluída</strong></li>
+ <li><strong>Paginação ainda não concluída: </strong> Bom, eu até consegui fazer uma paginação, mas toda vez que mudo de pagina a tabela fica carregado por aproximadamente 2 segundos e desaparece. Por hora deixei minha paginação em arquivos separados, até que eu resolva</li>
  </ul>
  
  
