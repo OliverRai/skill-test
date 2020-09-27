@@ -32,13 +32,12 @@
     text-decoration: none;
 }
 
-Link{
-    text-decoration: none;
-}
 .btn-del{
     border: 0;
     border-radius: 0.5rem;
     background: none;
+    color: #000;
+    text-decoration: none;
 }
 
 .tabela{

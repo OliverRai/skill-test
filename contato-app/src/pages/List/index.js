@@ -13,15 +13,11 @@ function ListPessoas(){
     useEffect(() => {
         const fetchUsers = async() =>{
             const res = await axios.get('http://localhost:8080/api');
-
             setUsers(res.data);
-            
         };
 
         fetchUsers();
     }, []);
-
-
 
         return(
             <div className="content-container">
@@ -61,6 +57,7 @@ function ListPessoas(){
                     <Link  to="/register"><button id="btn-add">Adicionar</button></Link>
                 </div>
                 </div>
+               
             </div>
         )
     }

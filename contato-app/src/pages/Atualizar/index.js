@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import { Form } from 'react-bootstrap'
-
 import './styles.css'
-
-///ainda sem funcionar 
 
 class Atualizar extends Component {
 

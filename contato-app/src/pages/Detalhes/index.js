@@ -4,7 +4,6 @@ import axios from 'axios'
 import {Button} from 'react-bootstrap'
 import './styles.css'
 
-///ainda sem funcionar 
 
 class DetalhesContato extends Component {
 
@@ -64,7 +63,7 @@ class DetalhesContato extends Component {
     render() {
         const { id, nome, idade, cidade, estado, cpf, estadoCivil } = this.state;
         return (
-            <div id="register-content">
+            <div id="detalhes-content">
                 <div className="container">
                     <h1>Olha lá hein! Tem certeza que quer deletar?</h1>
                     <form>
@@ -131,7 +130,7 @@ class DetalhesContato extends Component {
                     </form>
                     <div className="button-block">
                         <Link to="/"><Button className="btn btn-info voltar">Voltar</Button> </Link>
-                        <Button className="btn btn-danger" onClick={() =>this.deletePessoa(id)}>Deletar</Button>
+                        <Button className="btn btn-danger deletar" onClick={() =>this.deletePessoa(id)}>Deletar</Button>
                     </div>
                 </div>
             </div>

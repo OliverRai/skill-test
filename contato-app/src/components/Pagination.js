@@ -1,26 +1,29 @@
-import React from 'react';
+import React, { useState } from "react";
 
-const Pagination = ({usersPerPage,totalUsers, paginate}) => {
+function usePagination(data, itemsPerPage) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const maxPage = Math.ceil(data.length / itemsPerPage);
 
-    const pageNumbers = [];
+  function currentData() {
+    const begin = (currentPage - 1) * itemsPerPage;
+    const end = begin + itemsPerPage;
+    return data.slice(begin, end);
+  }
 
-    for(let i=1 ; i<Math.ceil(totalUsers/usersPerPage) ; i++){
-        pageNumbers.push(i)
-    }
+  function next() {
+    setCurrentPage(currentPage => Math.min(currentPage + 1, maxPage));
+  }
 
-    return(
-        <div>
-            <nav>
-                <ul className="pagination">
-                    {pageNumbers.map(number => (
-                        <li className="page-item" key={number}>
-                            <a onClick={() => paginate(number)} href="!#" className="page-link">{number}</a>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        </div>
-    )
+  function prev() {
+    setCurrentPage(currentPage => Math.max(currentPage - 1, 1));
+  }
+
+  function jump(page) {
+    const pageNumber = Math.max(1, page);
+    setCurrentPage(currentPage => Math.min(pageNumber, maxPage));
+  }
+
+  return { next, prev, jump, currentData, currentPage, maxPage };
 }
 
-export default Pagination;
+export default usePagination;

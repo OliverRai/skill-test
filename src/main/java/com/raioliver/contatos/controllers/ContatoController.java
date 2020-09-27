@@ -3,6 +3,7 @@ package com.raioliver.contatos.controllers;
 import com.raioliver.contatos.model.Contato;
 import com.raioliver.contatos.repository.ContatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -39,6 +40,7 @@ public class ContatoController {
 
     @PutMapping("{id}")
     public void atualizar(@PathVariable Integer id, @RequestBody Contato contatoAtualizada) {
+        Sort sort = Sort.by(Sort.Direction.ASC, "id");
         repository
                 .findById(id)
                 .map(pessoa -> {
