@@ -7,6 +7,16 @@ const Users = ({users,loading}) => {
 
     return(
         <div className="content-container">
+            <ul>
+                {users.map(user => (
+
+                    <li key={user.id}>
+                        {user.nome}
+                    </li>
+                ))}
+
+
+            </ul>
             <table className="table table-striped">
                     <thead>
                         <tr>

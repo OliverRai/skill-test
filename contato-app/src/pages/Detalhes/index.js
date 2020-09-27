@@ -69,7 +69,6 @@ class DetalhesContato extends Component {
                     <h1>Olha lá hein! Tem certeza que quer deletar?</h1>
                     <form>
                         <div className="input-block">
-                            
                             <input
                                 type="text"
                                 id="id"

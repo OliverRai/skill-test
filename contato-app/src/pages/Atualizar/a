@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
-import { Form } from 'react-bootstrap'
 
 import './styles.css'
 
@@ -15,10 +14,7 @@ class Atualizar extends Component {
         this.state = this.initialState;
         this.state = {
             users: [],
-            show : false
         }
-        this.onChangeInput = this.onChangeInput.bind(this);
-        this.atualizarPessoa = this.atualizarPessoa.bind(this);
     }
 
     initialState = {
@@ -51,43 +47,20 @@ class Atualizar extends Component {
             });
 
     }
- /*   atualizarPessoa(e){
-        e.preventDefault();
-            const id = document.querySelector('#update').value
-            const title = document.querySelector('#update-title').value
-                axios.put(`http://localhost:8080/api/${id}`,{title}).then(res => showResponse(res))
-        }
-    }*/
+
 
     atualizarPessoa(e) {
         e.preventDefault();
-        
-        const pessoa = {
-            id: this.state.id,
-            nome: this.state.nome,
-            idade: this.state.idade,
-            cidade: this.state.cidade,
-            estado: this.state.estado,
-            estadoCivil: this.state.estadoCivil,
-            cpf: this.state.cpf,
-        }
+        const personId = +this.props.match.params.id;
 
-        axios.put(`http://localhost:8080/api/${pessoa.id}`, pessoa).then(reponse => {
-            if(reponse.data != null){
-                this.setState({"show":true, "method":"post"});
-                this.returnList();
-            } else {
-                this.setState({"show":false});
-            }
-        })
+        axios.put('http://localhost:8080/api/'+personId)
+        .then(res=>console.log(res.data))
+            
+};
+    
 
-    };
 
-    returnList = () => {
-        return this.props.history.push("/");
-    };
-
-    onChangeInput = (e) => this.setState({ [e.target.name]: e.target.value })
+   onChangeInput = (e) => this.setState({ [e.target.name]: e.target.value })
 
 
     resetPerson = () => {
@@ -102,54 +75,63 @@ class Atualizar extends Component {
                     <h1>O que você gostaria de atualizar?</h1>
                     <form>
                         <div className="input-block">
-                            <Form.Control
-                                required autoComplete="off"
-                                name="id"
+                            <input
+                                type="text"
+                                id="id"
+                                placeholder="ID"
                                 value={id}
                                 disabled
                                 onChange={this.onChangeInput}
                             />
-
-                            <Form.Control
-                                required autoComplete="off"
-                                name="nome"
+                            <input
+                                type="text"
+                                id="nome"
+                                placeholder="Nome"
                                 value={nome}
                                 onChange={this.onChangeInput}
                             />
-
-                            <Form.Control
-                                required autoComplete="off"
-                                name="idade"
-                                value={idade}
-                                type="number"
-                                onChange={this.onChangeInput}
-                            />
-                            <Form.Control
-                                required autoComplete="off"
-                                name="cpf"
-                                value={cpf}
+                            <input
                                 type="text"
-                                onChange={this.onChangeInput}
-                            />
-                            <Form.Control
-                                required autoComplete="off"
-                                name="cidade"
-                                value={cidade}
-                                onChange={this.onChangeInput}
-                            />
-                            <Form.Control
-                                required autoComplete="off"
-                                name="estado"
-                                value={estado}
-                                onChange={this.onChangeInput}
-                            />
-                            <Form.Control
-                                required autoComplete="off"
-                                name="estadoCivil"
-                                value={estadoCivil}
+                                id="idade"
+                                placeholder="Idade"
+                                value={idade}
+
                                 onChange={this.onChangeInput}
                             />
 
+                            <input
+                                type="text"
+                                id="cidade"
+
+                                value={cidade}
+                                placeholder="Cidade"
+                                onChange={this.onChangeInput}
+                            />
+                            <input
+                                type="text"
+                                id="estado"
+                                placeholder="Estado"
+                                onChange={this.onChangeInput}
+                                value={estado}
+
+                            />
+
+                            <input
+                                type="text"
+                                id="cpf"
+                                placeholder="CPF"
+                                onChange={this.onChangeInput}
+                                value={cpf}
+
+                            />
+                            <input
+                                type="text"
+                                id="estadoCivil"
+                                placeholder="Estado civil"
+                                onChange={this.onChangeInput}
+                                value={estadoCivil}
+
+                            />
                         </div>
                     </form>
                     <div className="button-block">

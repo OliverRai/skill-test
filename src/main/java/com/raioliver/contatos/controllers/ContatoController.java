@@ -32,12 +32,12 @@ public class ContatoController {
                 new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente não encontrado"));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
     public void delete(@PathVariable Integer id){
         repository.deleteById(id);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("{id}")
     public void atualizar(@PathVariable Integer id, @RequestBody Contato contatoAtualizada) {
         repository
                 .findById(id)
