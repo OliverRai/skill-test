@@ -11,9 +11,9 @@
  <h2>Funcionalidades</h2>
  <p> O objetivo é fazer uma api que possa inserir, deletar e atualizar dados(nesse caso uma lista de contatos), e além de uma páginação para a tabela em questão</p>
  <ul>
-  <li>Métodos de inserir usuários, ztualizar e deletar prontos! Nenhum mistério! Apenas fiz os métodos em questão na API, usando as anotações PostMapping e DeleteMapping. Ah, não se esqueça de configurar o CORS, ou ele irá bloquear sua requisição! (muita dor de cabeça rs)</li>
+  <li>Métodos de inserir usuários, atualizar e deletar prontos! Nenhum mistério! Apenas fiz os métodos em questão na API, usando as anotações PostMapping e DeleteMapping. Ah, não se esqueça de configurar o CORS, ou ele irá bloquear sua requisição! (muita dor de cabeça rs)</li>
   <li>Instalei com o yarn o react-feather, para poder usar uns icons maneiros e deixar mais aprensentável</li>
-  <li><strong>Paginação ainda não iniciada</strong></li>
+ <li><strong>Paginação ainda não concluída</strong></li>
  </ul>
  
  
