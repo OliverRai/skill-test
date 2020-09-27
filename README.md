@@ -30,6 +30,7 @@
    <li>Ordenar tabela após atualização de contato</li>
    <li>Concluir a Paginação</li>
    <li>Utilizar ferramentas de testes, algo que ainda nunca fiz. Será um bom aprendizado. </li>
+ <li>Pretendo ainda utilizar o firebase, porém não muito brevemente, visto que estou participando de um bootcamp intensivo. Espero conseguir logo! </li>
  </ul>
  
  <h2>OBS</h2>
